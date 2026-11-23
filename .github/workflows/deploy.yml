@@ -32,11 +32,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      
       - name: Build production bundle
         env:
-           VITE_BASE_PATH: /masudlabs/
-           VITE_SITE_URL: ${{ vars.VITE_SITE_URL }}
+          VITE_BASE_PATH: /
+          VITE_SITE_URL: ${{ vars.VITE_SITE_URL }}
         run: npm run build
+
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
