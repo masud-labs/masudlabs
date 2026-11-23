@@ -1,0 +1,6 @@
+{
+  "name": "Masud Labs",
+  "description": "Official developer platform and application directory for Masud Labs. Technology. Creativity. Innovation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

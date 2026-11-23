@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Masud Labs — Redirecting</title>
+    <script>
+      // GitHub Pages SPA redirect handler.
+      // Automatically keeps 1 path segment when hosted on *.github.io/masudlabs/
+      // and 0 segments on a custom root domain.
+      (function () {
+        var l = window.location;
+        var isProjectSubpath =
+          l.hostname.endsWith('.github.io') &&
+          l.pathname.toLowerCase().indexOf('/masudlabs') === 0;
+        var pathSegmentsToKeep = isProjectSubpath ? 1 : 0;
+
+        l.replace(
+          l.protocol +
+            '//' +
+            l.hostname +
+            (l.port ? ':' + l.port : '') +
+            l.pathname
+              .split('/')
+              .slice(0, 1 + pathSegmentsToKeep)
+              .join('/') +
+            '/?/' +
+            l.pathname
+              .slice(1)
+              .split('/')
+              .slice(pathSegmentsToKeep)
+              .join('/')
+              .replace(/&/g, '~and~') +
+            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+            l.hash
+        );
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
