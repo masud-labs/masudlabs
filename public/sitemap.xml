@@ -1,128 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Replace "https://masud-labs.github.io/masudlabs" with your actual GitHub Pages URL
+  Replace "https://masudlabs.de5.net/" with your actual GitHub Pages URL
   (e.g., https://<username>.github.io/masudlabs) or custom domain before submitting
   to Google Search Console.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/</loc>
+    <loc>https://masudlabs.de5.net/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps</loc>
+    <loc>https://masudlabs.de5.net/apps</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/about</loc>
+    <loc>https://masudlabs.de5.net/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/contact</loc>
+    <loc>https://masudlabs.de5.net//contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/legal</loc>
+    <loc>https://masudlabs.de5.net/legal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/privacy-policy</loc>
+    <loc>https://masudlabs.de5.net/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/terms-of-service</loc>
+    <loc>https://masudlabs.de5.net/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/data-deletion</loc>
+    <loc>https://masudlabs.de5.net/data-deletion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- Application Landing & Legal Pages -->
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/takalog-money-tracker</loc>
+    <loc>https://masudlabs.de5.net/apps/takalog-money-tracker</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/takalog-money-tracker/privacy-policy</loc>
+    <loc>https://masudlabs.de5.net/apps/takalog-money-tracker/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/takalog-money-tracker/terms-of-service</loc>
+    <loc>https://masudlabs.de5.net/apps/takalog-money-tracker/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/takalog-money-tracker/data-deletion</loc>
+    <loc>https://masudlabs.de5.net/takalog-money-tracker/data-deletion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/activity-calendar</loc>
+    <loc>https://masudlabs.de5.net/activity-calendar</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/activity-calendar/privacy-policy</loc>
+    <loc>https://masudlabs.de5.net/apps/activity-calendar/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/activity-calendar/terms-of-service</loc>
+    <loc>https://masudlabs.de5.net/activity-calendar/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/activity-calendar/data-deletion</loc>
+    <loc>https://masudlabs.de5.net/apps/activity-calendar/data-deletion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/my-phone-remote-control</loc>
+    <loc>https://masudlabs.de5.net/apps/my-phone-remote-control</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/my-phone-remote-control/privacy-policy</loc>
+    <loc>https://masudlabs.de5.net/apps/my-phone-remote-control/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/my-phone-remote-control/terms-of-service</loc>
+    <loc>https://masudlabs.de5.net/apps/my-phone-remote-control/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/my-phone-remote-control/data-deletion</loc>
+    <loc>https://masudlabs.de5.net/apps/my-phone-remote-control/data-deletion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/candy-puzzle</loc>
+    <loc>https://masudlabs.de5.net/apps/candy-puzzle</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/candy-puzzle/privacy-policy</loc>
+    <loc>https://masudlabs.de5.net/apps/candy-puzzle/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/candy-puzzle/terms-of-service</loc>
+    <loc>https://masudlabs.de5.net/apps/candy-puzzle/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://masud-labs.github.io/masudlabs/apps/candy-puzzle/data-deletion</loc>
+    <loc>https://masudlabs.de5.net/apps/candy-puzzle/data-deletion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
