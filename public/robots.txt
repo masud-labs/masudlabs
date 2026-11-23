@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
 
-# Update the Sitemap URL below after enabling GitHub Pages or connecting a custom domain.
-# Example (GitHub Pages): Sitemap: https://<username>.github.io/masudlabs/sitemap.xml
-# Example (Custom Domain): Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://masud-labs.github.io/masudlabs/sitemap.xml
