@@ -1,128 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Replace "https://REPLACE_WITH_YOUR_DOMAIN" with your actual GitHub Pages URL
+  Replace "https://masud-labs.github.io/masudlabs" with your actual GitHub Pages URL
   (e.g., https://<username>.github.io/masudlabs) or custom domain before submitting
   to Google Search Console.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/</loc>
+    <loc>https://masud-labs.github.io/masudlabs/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/about</loc>
+    <loc>https://masud-labs.github.io/masudlabs/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/contact</loc>
+    <loc>https://masud-labs.github.io/masudlabs/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/legal</loc>
+    <loc>https://masud-labs.github.io/masudlabs/legal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/privacy-policy</loc>
+    <loc>https://masud-labs.github.io/masudlabs/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/terms-of-service</loc>
+    <loc>https://masud-labs.github.io/masudlabs/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/data-deletion</loc>
+    <loc>https://masud-labs.github.io/masudlabs/data-deletion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- Application Landing & Legal Pages -->
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/takalog-money-tracker</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/takalog-money-tracker</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/takalog-money-tracker/privacy-policy</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/takalog-money-tracker/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/takalog-money-tracker/terms-of-service</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/takalog-money-tracker/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/takalog-money-tracker/data-deletion</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/takalog-money-tracker/data-deletion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/activity-calendar</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/activity-calendar</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/activity-calendar/privacy-policy</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/activity-calendar/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/activity-calendar/terms-of-service</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/activity-calendar/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/activity-calendar/data-deletion</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/activity-calendar/data-deletion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/my-phone-remote-control</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/my-phone-remote-control</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/my-phone-remote-control/privacy-policy</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/my-phone-remote-control/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/my-phone-remote-control/terms-of-service</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/my-phone-remote-control/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/my-phone-remote-control/data-deletion</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/my-phone-remote-control/data-deletion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/candy-puzzle</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/candy-puzzle</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/candy-puzzle/privacy-policy</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/candy-puzzle/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/candy-puzzle/terms-of-service</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/candy-puzzle/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_YOUR_DOMAIN/apps/candy-puzzle/data-deletion</loc>
+    <loc>https://masud-labs.github.io/masudlabs/apps/candy-puzzle/data-deletion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
