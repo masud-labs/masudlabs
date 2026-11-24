@@ -9,7 +9,12 @@ export type AppCategory =
 
 export type AppPlatform = 'Android' | 'Web' | 'Android + Web';
 
-export type AppStatus = 'Published' | 'Beta' | 'In Development' | 'Coming Soon';
+export type AppStatus =
+  | 'Published'
+  | 'Beta'
+  | 'Ready for Release'
+  | 'In Development'
+  | 'Coming Soon';
 
 export type AppIconKey = 'takalog' | 'calendar' | 'remote' | 'candy' | 'default';
 
