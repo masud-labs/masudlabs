@@ -1,3 +1,4 @@
+import {useEffect, useState} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import {
   ArrowLeft,
@@ -15,9 +16,27 @@ import {getAppBySlug} from '../data/apps';
 import {usePageMeta} from '../hooks/usePageMeta';
 import {NotFoundPage} from './NotFoundPage';
 
+
+
+const takalogScreenshots = [
+  {file: 'takalog-dashboard.png', title: 'Dashboard'},
+  {file: 'takalog-dashboard1.png', title: 'Account Overview'},
+  {file: 'takalog-transactions.png', title: 'Transactions'},
+  {file: 'takalog-addincome.png', title: 'Add Income'},
+  {file: 'takalog-addexpence.png', title: 'Add Expense'},
+  {file: 'takalog-lend-borrow.png', title: 'Lend & Borrow'},
+  {file: 'takalog-lend-borrow1.png', title: 'Lending Records'},
+  {file: 'takalog-statistics.png', title: 'Statistics'},
+  {file: 'takalog-pdf.png', title: 'PDF Reports'},
+  {file: 'takalog-create.png', title: 'Create Record'},
+  {file: 'takalog-backup.png', title: 'Google Drive Backup'},
+];
+
+
 export function AppDetailPage() {
   const {slug} = useParams<{slug: string}>();
   const app = getAppBySlug(slug);
+  const [activeScreenshot, setActiveScreenshot] = useState<number | null>(null);
 
   usePageMeta({
     title: app
@@ -50,6 +69,43 @@ export function AppDetailPage() {
     return <NotFoundPage />;
   }
 
+
+  
+useEffect(() => {
+  if (activeScreenshot === null) return;
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      setActiveScreenshot(null);
+    }
+
+    if (event.key === 'ArrowRight') {
+      setActiveScreenshot((current) =>
+        current === null
+          ? null
+          : (current + 1) % takalogScreenshots.length,
+      );
+    }
+
+    if (event.key === 'ArrowLeft') {
+      setActiveScreenshot((current) =>
+        current === null
+          ? null
+          : (current - 1 + takalogScreenshots.length) %
+            takalogScreenshots.length,
+      );
+    }
+  };
+
+  window.addEventListener('keydown', handleKeyDown);
+
+  return () => {
+    window.removeEventListener('keydown', handleKeyDown);
+  };
+}, [activeScreenshot]);
+
+
+  
   const isReadyForRelease = app.status === 'Ready for Release';
 
   return (
@@ -168,6 +224,7 @@ export function AppDetailPage() {
         <div className="lg:col-span-8 space-y-10">
           {/* Screenshots Gallery */}
          
+
 {app.id === 'takalog-money-tracker' && (
   <section className="mt-12">
     <div className="mb-6">
@@ -180,28 +237,16 @@ export function AppDetailPage() {
     </div>
 
     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      {[
-        { file: 'takalog-dashboard.png', title: 'Dashboard' },
-        { file: 'takalog-dashboard1.png', title: 'Account Overview' },
-        { file: 'takalog-transactions.png', title: 'Transactions' },
-        { file: 'takalog-addincome.png', title: 'Add Income' },
-        { file: 'takalog-addexpence.png', title: 'Add Expense' },
-        { file: 'takalog-lend-borrow.png', title: 'Lend & Borrow' },
-        { file: 'takalog-lend-borrow1.png', title: 'Lending Records' },
-        { file: 'takalog-statistics.png', title: 'Statistics' },
-        { file: 'takalog-pdf.png', title: 'PDF Reports' },
-        { file: 'takalog-create.png', title: 'Create Record' },
-        { file: 'takalog-backup.png', title: 'Google Drive Backup' },
-      ].map((screenshot) => (
+      {takalogScreenshots.map((screenshot, index) => (
         <figure
           key={screenshot.file}
           className="overflow-hidden rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-[#0D1322]"
         >
-          <a
-            href={`/screenshots/${screenshot.file}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`View ${screenshot.title} screenshot`}
+          <button
+            type="button"
+            onClick={() => setActiveScreenshot(index)}
+            className="block w-full cursor-zoom-in"
+            aria-label={`Enlarge ${screenshot.title} screenshot`}
           >
             <img
               src={`/screenshots/${screenshot.file}`}
@@ -209,13 +254,86 @@ export function AppDetailPage() {
               loading="lazy"
               className="h-auto w-full object-contain transition-transform duration-300 hover:scale-[1.02]"
             />
-          </a>
+          </button>
+
           <figcaption className="border-t border-slate-100 px-4 py-3 text-sm font-medium text-slate-700 dark:border-slate-800 dark:text-slate-200">
             {screenshot.title}
           </figcaption>
         </figure>
       ))}
     </div>
+
+    {activeScreenshot !== null && (
+      <div
+        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 sm:p-8"
+        onClick={() => setActiveScreenshot(null)}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Screenshot viewer"
+      >
+        <div
+          className="relative flex max-h-full w-full max-w-5xl flex-col items-center"
+          onClick={(event) => event.stopPropagation()}
+        >
+          <div className="mb-4 flex w-full items-center justify-between gap-4">
+            <div className="text-sm font-medium text-white">
+              {takalogScreenshots[activeScreenshot].title}
+              <span className="ml-2 text-white/60">
+                {activeScreenshot + 1} / {takalogScreenshots.length}
+              </span>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setActiveScreenshot(null)}
+              className="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white hover:bg-white/20"
+              aria-label="Close screenshot viewer"
+            >
+              Close ✕
+            </button>
+          </div>
+
+          <div className="flex min-h-0 w-full flex-1 items-center justify-center gap-2 sm:gap-5">
+            <button
+              type="button"
+              onClick={() =>
+                setActiveScreenshot(
+                  (activeScreenshot - 1 + takalogScreenshots.length) %
+                    takalogScreenshots.length,
+                )
+              }
+              className="shrink-0 rounded-full bg-white/10 px-3 py-3 text-xl text-white hover:bg-white/20 sm:px-4"
+              aria-label="Previous screenshot"
+            >
+              ‹
+            </button>
+
+            <img
+              src={`/screenshots/${takalogScreenshots[activeScreenshot].file}`}
+              alt={takalogScreenshots[activeScreenshot].title}
+              className="max-h-[75vh] max-w-[calc(100%-5rem)] rounded-lg object-contain"
+            />
+
+            <button
+              type="button"
+              onClick={() =>
+                setActiveScreenshot(
+                  (activeScreenshot + 1) % takalogScreenshots.length,
+                )
+              }
+              className="shrink-0 rounded-full bg-white/10 px-3 py-3 text-xl text-white hover:bg-white/20 sm:px-4"
+              aria-label="Next screenshot"
+            >
+              ›
+            </button>
+          </div>
+
+          <p className="mt-4 text-xs text-white/60">
+            Use the arrow keys to navigate · Press Escape to close
+          </p>
+        </div>
+      </div>
+    )}
   </section>
 )}
 
