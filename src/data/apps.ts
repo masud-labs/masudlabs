@@ -167,70 +167,57 @@ privacyPolicy: {
 },
 
    
-termsOfService: {
-  isDraftNotice: true,
-
-  acceptanceOfTerms:
-    'By accessing or using Takalog Money Tracker, you agree to these Terms of Service. If you do not agree with these terms, please do not use the application.',
-
-  permittedUse:
-    'Takalog Money Tracker is intended for personal financial record-keeping, including tracking income, expenses, balances, and related financial activities. You may use the application only for lawful purposes.',
-
-  userResponsibilities: [
-    'Provide accurate information when entering financial transactions and other records.',
-    'Maintain the security of your Android device and any Google Account connected to the application.',
-    'Keep your backup files and any required recovery information secure.',
-    'Review your backup status and maintain additional copies of important financial records when necessary.',
-    'Do not misuse, reverse-engineer, modify, or interfere with the application or its connected services in ways prohibited by applicable law.',
-  ],
-
-  intellectualProperty:
-    'The original software code, interface design, branding, graphics, and documentation of Takalog Money Tracker are the intellectual property of Masud Labs, except for third-party components distributed under their respective licenses.',
-
-  serviceAvailability:
-    'Takalog Money Tracker is currently in development. Features, functionality, and availability may change before or after release. Masud Labs does not guarantee uninterrupted or error-free operation.',
-
-  thirdPartyServices:
-    'Optional Google Sign-In and Google Drive backup features rely on services provided by Google LLC. Google Drive backup uses the application-specific appDataFolder through the Google Drive API. Your use of Google services is also subject to Google’s applicable terms and policies. Masud Labs is not responsible for service interruptions or changes made by third-party providers.',
-
-  disclaimer:
-    'Takalog Money Tracker is provided on an "AS IS" and "AS AVAILABLE" basis to the maximum extent permitted by law. The application is a personal financial record-keeping tool and does not provide professional financial, banking, tax, investment, or legal advice. Always verify important financial information independently.',
-
-  limitationOfLiability:
-    'To the maximum extent permitted by applicable law, Masud Labs shall not be liable for indirect, incidental, special, consequential, or financial losses arising from the use or inability to use the application, third-party service interruptions, device failures, or loss of locally stored or backed-up data.',
-
-  changesToTerms:
-    'Masud Labs may update these Terms of Service when application features, services, or legal requirements change. Updated terms will be published on this page with a revised effective date. Continued use of the application after updated terms take effect constitutes acceptance of the revised terms.',
-},
-
- 
-dataDeletion: {
-  isDraftNotice: true,
-
-  accountDeletionInstructions: [
-    'Send an email to masudlabssupport@gmail.com with the subject line "Account & Data Deletion Request — Takalog Money Tracker".',
-    'Include the email address associated with your Google Sign-In account, if applicable, so we can identify your connected account information.',
-    'Specify whether you want to disconnect your Google Account, delete your Google Drive app-private backups, or request deletion of other information associated with your use of the application.',
-    'Requests are reviewed manually by the Masud Labs support team. Account and data deletion requests are not automatically processed by the application.',
-  ],
-
-  personalDataDeletionInstructions: [
-    'You can delete locally stored application data by clearing the application storage or uninstalling the application.',
-    'You can delete Google Drive app-private backup files by disconnecting or removing the application from your Google Account settings, where supported.',
-    'If you need assistance identifying or deleting information associated with your use of the application, contact Masud Labs support.',
-    'You will receive confirmation by email when a manually processed deletion request has been completed.',
-  ],
-
-  cloudDataHandling:
-    'Takalog Money Tracker uses the Google Drive API appDataFolder for its private cloud backup files. These backup files are not stored in Firebase. You can manage or remove the application and its associated hidden app data through your Google Account or Google Drive Manage Apps settings, where available. Removing the application or its app data may permanently delete its cloud backups. Keep a separate copy of any backup you wish to retain before deletion.',
-
-  localDataHandling:
-    'Financial records and application data stored in the local Room/SQLite database remain on your Android device. To delete this data, open Android Settings > Apps > Takalog Money Tracker > Storage > Clear Storage, or uninstall the application. These actions may permanently remove locally stored records. Export or back up important information before deleting local data.',
-
-  supportNotes:
-    'For questions or assistance with account information, personal data, or deletion requests, contact masudlabssupport@gmail.com.',
-},
+  termsOfService: {
+      isDraftNotice: true,
+      lastUpdated: 'November 24, 2026',
+      acceptanceOfTerms:
+        'By installing, accessing, or using TakaLog Money Tracker, you agree to these Terms of Service. If you do not agree, do not use the application.',
+      permittedUse:
+        'TakaLog is an offline-first personal finance record-keeping application for recording and reviewing income, expenses, account balances, categories, and personal lend-and-borrow records. It is provided for personal use and is not a bank, payment service, accounting service, or financial advisory service.',
+      userResponsibilities: [
+        'You are responsible for the accuracy and lawfulness of the financial entries and personal details you enter, including names, phone numbers or notes, amounts, dates, and reminders in lend-and-borrow records.',
+        'Keep your Android device and any Google Account used with TakaLog secure. Only connect a Google Account that you are authorized to use.',
+        'If you use encrypted backup and restore, keep your recovery passphrase safe. A backup may not be recoverable if the required passphrase is lost or forgotten.',
+        'Check that backups complete successfully and keep a separate copy of important exported backup files. Disconnecting Google Drive does not delete backup files already stored there.',
+        'Use the application only for lawful personal purposes. Do not attempt unauthorized access to another person’s device, Google Account, or data, or interfere with the application or its services.',
+      ],
+      intellectualProperty:
+        'The TakaLog application, its original source code, interface, branding, graphics, and documentation are owned by Masud Labs, except for third-party components governed by their own licenses and terms.',
+      serviceAvailability:
+        'TakaLog is currently listed as In Development. Features and availability may change during development. The application is provided without a guarantee of uninterrupted, error-free, or permanently available operation. Google Sign-In and Google Drive functions also depend on services operated by Google.',
+      thirdPartyServices:
+        'The inspected TakaLog source uses Android Credential Manager for Google Sign-In and the Google Drive API with the https://www.googleapis.com/auth/drive.appdata scope for optional backup and restore in the private Google Drive appDataFolder. The inspected source does not implement Firebase Authentication, Cloud Firestore, or a Masud Labs hosted account or financial-record synchronization backend. Google services are provided by Google LLC and are subject to Google’s own terms and privacy policies.',
+      disclaimer:
+        'TakaLog is a personal record-keeping tool. It does not connect to banks or verify transactions with financial institutions, and it does not provide financial, banking, tax, investment, accounting, or legal advice. You should independently verify important records and decisions. To the maximum extent permitted by law, the application is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind.',
+      limitationOfLiability:
+        'To the maximum extent permitted by applicable law, Masud Labs will not be liable for indirect, incidental, special, consequential, or financial losses arising from use or inability to use TakaLog, inaccurate user-entered records, device loss or failure, forgotten recovery passphrases, failed or unavailable backups, or interruptions or changes to Google services. Nothing in these terms excludes liability that cannot lawfully be excluded.',
+      changesToTerms:
+        'Masud Labs may update these Terms when the application, its services, or applicable requirements change. The revised version and its effective date will be published on this page. Where required by applicable law, users will be notified of material changes.',
     },
+    dataDeletion: {
+      isDraftNotice: true,
+      lastUpdated: 'November 24, 2026',
+      accountDeletionInstructions: [
+        'TakaLog does not create a separate Masud Labs hosted user account. Google Sign-In is used to identify the Google account connected to the optional Google Drive backup feature; the inspected source stores the connected account details in the app’s local preferences.',
+        'To remove the Google account connection from TakaLog, open the app’s Backup & Restore screen and use Disconnect. This removes the app’s locally stored connected-account state and stops the current connection; it does not delete backup files already stored in Google Drive.',
+        'If you also want to revoke TakaLog’s Google authorization, review the third-party app access section of your Google Account and remove TakaLog’s access there. Revoking access alone should not be treated as confirmation that existing backup files have been deleted.',
+        'For help understanding these steps, contact masudlabssupport@gmail.com. Masud Labs cannot directly browse or delete files in your private Google Drive appDataFolder from a hosted account system because the inspected source contains no such backend.',
+      ],
+      personalDataDeletionInstructions: [
+        'To erase TakaLog data stored on your Android device, open Android Settings > Apps > TakaLog Money Tracker > Storage > Clear storage / Clear data. The exact wording may vary by Android version and device manufacturer.',
+        'Alternatively, uninstall TakaLog. The inspected Android manifest disables Android app backup (android:allowBackup="false"). Clearing storage or uninstalling removes the app’s local database and preferences, including locally stored transaction, category, lend-and-borrow, app-setting, and connected-account data.',
+        'If you exported a local .tkb backup through Android’s file picker, that file is saved to a location you selected and is outside the app’s private storage. Find and delete that exported file separately if you no longer want to retain it.',
+        'Deleting local app data does not delete Google Drive backups. Follow the cloud-backup deletion steps below as a separate action.',
+      ],
+      cloudDataHandling:
+        'Optional cloud backups are encrypted .tkb archives stored in the connected Google Account’s private Google Drive appDataFolder. The inspected backup serializer includes app settings, categories, financial transactions, lend-and-borrow people, and lend-and-borrow entries in the archive. The source implements in-app listing and deletion of individual remote backup files. Before deleting them, open Backup & Restore while the Google Account is still connected, turn off Auto Background Backup, then use the delete control beside each listed Google Drive backup and repeat until the list is empty. Verify the list is empty before disconnecting the account. Disconnecting Google Drive, signing out, clearing app storage, or uninstalling TakaLog does not itself delete already uploaded Drive backup files. The inspected source does not use Firebase or a separate cloud database for financial-record synchronization.',
+      localDataHandling:
+        'The app stores financial records in a local Room / SQLite database and app preferences in Android DataStore. Clearing app storage or uninstalling removes this app-private local data. This is permanent unless you have a usable backup. Exported .tkb files saved through the Android file picker are stored wherever you chose and must be deleted separately. Do not clear storage or uninstall until you have exported anything you want to keep.',
+      supportNotes:
+        'For assistance understanding local-data removal, Google account disconnection, or the in-app Drive backup deletion steps, contact masudlabssupport@gmail.com. Please do not email financial records, backup files, Google passwords, access tokens, or recovery passphrases.',
+    },
+  },
+
 
   {
     id: 'activity-calendar',
