@@ -37,53 +37,58 @@ export const APPS_DATA: AppRecord[] = [
     name: 'Takalog Money Tracker',
     shortDescription:
       'A personal money management application designed to help users track income, expenses, balances, and financial activities.',
-    longDescription:
-      'Takalog Money Tracker is a personal finance companion currently in development at Masud Labs. It is designed to give individuals a clear, structured record of their everyday income, expenses, and account balances without unnecessary complexity. Architectural planning includes optional local-first storage alongside configurable cloud synchronization and user-initiated backup workflows.',
-    category: 'Finance',
+   longDescription:
+  'TakaLog Money Tracker is an offline-first personal finance application developed by Masud Labs. It helps users record income, expenses, account balances, and lend-and-borrow activities. Financial records are stored locally on the Android device, with optional Google Sign-In and encrypted Google Drive app-private backup and restore. The app also supports manual backup and restore. It does not provide hosted cloud synchronization of financial records.',    category: 'Finance',
     platform: 'Android',
-    status: 'In Development',
+    status: 'Ready for Release',
     iconKey: 'takalog',
     accent: 'violet',
     featured: true,
     screenshots: [],
-    features: [
-      {
-        title: 'Income and Expense Tracking',
-        description:
-          'Record daily financial transactions across custom categories and review running balances.',
-        state: 'planned',
-      },
-      {
-        title: 'Local Data Storage',
-        description:
-          'Store personal financial logs locally on the Android device for offline access.',
-        state: 'planned',
-      },
-      {
-        title: 'Google Sign-In Integration',
-        description:
-          'Configurable authentication option to associate optional cloud backups with a user Google account.',
-        state: 'planned',
-      },
-      {
-        title: 'Cloud Synchronization',
-        description:
-          'Planned synchronization support using cloud database infrastructure so records stay accessible across devices.',
-        state: 'planned',
-      },
-      {
-        title: 'Google Drive App-Private Backup',
-        description:
-          'Configurable backup and restore using the restricted Google Drive appDataFolder scope, isolated from other Drive files.',
-        state: 'planned',
-      },
-      {
-        title: 'Manual Backup and Restore',
-        description:
-          'User-initiated export and restore controls to help manage personal ledger backups.',
-        state: 'planned',
-      },
-    ],
+   features: [
+  {
+    title: 'Income and Expense Tracking',
+    description:
+      'Record daily income and expenses with transaction amounts, dates, categories, and notes.',
+    state: 'implemented',
+  },
+  {
+    title: 'Categories and Balance Summaries',
+    description:
+      'Organize financial transactions into categories and review account balances and financial summaries.',
+    state: 'implemented',
+  },
+  {
+    title: 'Lend and Borrow Records',
+    description:
+      'Maintain personal lending and borrowing records with related people, amounts, dates, and notes.',
+    state: 'implemented',
+  },
+  {
+    title: 'Offline Local Storage',
+    description:
+      'Store financial records locally using Room and SQLite for offline access.',
+    state: 'implemented',
+  },
+  {
+    title: 'Google Sign-In',
+    description:
+      'Connect a Google account through Android Credential Manager for optional Google Drive backup.',
+    state: 'implemented',
+  },
+  {
+    title: 'Encrypted Google Drive Backup and Restore',
+    description:
+      'Upload, list, download, restore, and delete AES-256-GCM encrypted backup archives in the private Google Drive appDataFolder.',
+    state: 'implemented',
+  },
+  {
+    title: 'Manual Backup and Restore',
+    description:
+      'Export and restore backup files manually using Android file access controls.',
+    state: 'implemented',
+  },
+],
    
 privacyPolicy: {
   isDraftNotice: false,
@@ -185,8 +190,7 @@ privacyPolicy: {
       intellectualProperty:
         'The TakaLog application, its original source code, interface, branding, graphics, and documentation are owned by Masud Labs, except for third-party components governed by their own licenses and terms.',
       serviceAvailability:
-        'TakaLog is currently listed as In Development. Features and availability may change during development. The application is provided without a guarantee of uninterrupted, error-free, or permanently available operation. Google Sign-In and Google Drive functions also depend on services operated by Google.',
-      thirdPartyServices:
+  'TakaLog Money Tracker is prepared for release. Public availability and distribution depend on the applicable platform review and release process. Features may change in future versions. The application is provided without a guarantee of uninterrupted, error-free, or permanently available operation. Google Sign-In and Google Drive backup functions also depend on services operated by Google.',      thirdPartyServices:
         'The inspected TakaLog source uses Android Credential Manager for Google Sign-In and the Google Drive API with the https://www.googleapis.com/auth/drive.appdata scope for optional backup and restore in the private Google Drive appDataFolder. The inspected source does not implement Firebase Authentication, Cloud Firestore, or a Masud Labs hosted account or financial-record synchronization backend. Google services are provided by Google LLC and are subject to Google’s own terms and privacy policies.',
       disclaimer:
         'TakaLog is a personal record-keeping tool. It does not connect to banks or verify transactions with financial institutions, and it does not provide financial, banking, tax, investment, accounting, or legal advice. You should independently verify important records and decisions. To the maximum extent permitted by law, the application is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind.',
