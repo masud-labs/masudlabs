@@ -168,50 +168,58 @@ export function AppDetailPage() {
         {/* Main Column: Screenshots, Features, Release Notes */}
         <div className="lg:col-span-8 space-y-10">
           {/* Screenshots Gallery */}
-          <section aria-labelledby="screenshots-heading">
-            <h2
-              id="screenshots-heading"
-              className="font-display text-xl font-semibold text-slate-900 dark:text-white"
-            >
-              Screenshots Gallery
-            </h2>
-            {app.screenshots.length > 0 ? (
-              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {app.screenshots.map((shot, idx) => (
-                  <figure
-                    key={`${shot.src}-${idx}`}
-                    className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1322] overflow-hidden"
-                  >
-                    <img
-                      src={shot.src}
-                      alt={shot.alt}
-                      loading="lazy"
-                      referrerPolicy="no-referrer"
-                      className="w-full h-auto object-cover"
-                    />
-                    {shot.caption && (
-                      <figcaption className="px-4 py-3 text-xs text-slate-600 dark:text-slate-400">
-                        {shot.caption}
-                      </figcaption>
-                    )}
-                  </figure>
-                ))}
-              </div>
-            ) : (
-              <div className="mt-4 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-[#0D1322]/60 p-8 text-center">
-                <ImageOff
-                  className="w-7 h-7 mx-auto text-slate-400 dark:text-slate-500"
-                  aria-hidden="true"
-                />
-                <p className="mt-3 text-sm font-medium text-slate-800 dark:text-slate-200">
-                  Screenshots Coming Soon
-                </p>
-                <p className="mt-1 text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-md mx-auto">
-                  Verified interface screenshots will be published here when available.
-                </p>
-              </div>
-            )}
-          </section>
+         
+{app.id === 'takalog-money-tracker' && (
+  <section className="mt-12">
+    <div className="mb-6">
+      <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+        App Screenshots
+      </h2>
+      <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+        Explore the features and interface of TakaLog Money Tracker.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {[
+        { file: 'takalog-dashboard.png', title: 'Dashboard' },
+        { file: 'takalog-dashboard1.png', title: 'Account Overview' },
+        { file: 'takalog-transactions.png', title: 'Transactions' },
+        { file: 'takalog-addincome.png', title: 'Add Income' },
+        { file: 'takalog-addexpence.png', title: 'Add Expense' },
+        { file: 'takalog-lend-borrow.png', title: 'Lend & Borrow' },
+        { file: 'takalog-lend-borrow1.png', title: 'Lending Records' },
+        { file: 'takalog-statistics.png', title: 'Statistics' },
+        { file: 'takalog-pdf.png', title: 'PDF Reports' },
+        { file: 'takalog-create.png', title: 'Create Record' },
+        { file: 'takalog-backup.png', title: 'Google Drive Backup' },
+      ].map((screenshot) => (
+        <figure
+          key={screenshot.file}
+          className="overflow-hidden rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-[#0D1322]"
+        >
+          <a
+            href={`/screenshots/${screenshot.file}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View ${screenshot.title} screenshot`}
+          >
+            <img
+              src={`/screenshots/${screenshot.file}`}
+              alt={`TakaLog ${screenshot.title} screenshot`}
+              loading="lazy"
+              className="h-auto w-full object-contain transition-transform duration-300 hover:scale-[1.02]"
+            />
+          </a>
+          <figcaption className="border-t border-slate-100 px-4 py-3 text-sm font-medium text-slate-700 dark:border-slate-800 dark:text-slate-200">
+            {screenshot.title}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+)}
+
 
           {/* Features */}
           <section aria-labelledby="features-heading">
