@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Data deletion instructions for TakaLog Money Tracker by Masud Labs.">
+  <title>Data Deletion Instructions - TakaLog Money Tracker</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #263244;
+      background: #f5f7fb;
+    }
+    main {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 32px;
+      background: #fff;
+      border: 1px solid #e5eaf1;
+      border-radius: 14px;
+    }
+    h1, h2 { color: #172554; line-height: 1.3; }
+    h1 { font-size: 30px; margin-top: 0; }
+    h2 {
+      font-size: 20px;
+      margin-top: 30px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e5eaf1;
+    }
+    p, li { font-size: 15px; }
+    a { color: #2563eb; overflow-wrap: anywhere; }
+    .notice {
+      padding: 15px;
+      background: #fff8e6;
+      border-left: 4px solid #e5a000;
+      border-radius: 6px;
+    }
+    .meta { color: #64748b; font-size: 14px; }
+    footer {
+      margin-top: 35px;
+      padding-top: 18px;
+      border-top: 1px solid #e5eaf1;
+      color: #64748b;
+      font-size: 13px;
+    }
+    @media (max-width: 600px) {
+      main { padding: 22px 18px; }
+      h1 { font-size: 25px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Data Deletion Instructions</h1>
+  <p><strong>TakaLog Money Tracker</strong></p>
+  <p class="meta">
+    Developer: Masud Labs<br>
+    Support: <a href="mailto:masudlabssupport@gmail.com">masudlabssupport@gmail.com</a>
+  </p>
+
+  <div class="notice">
+    <strong>Pre-Release Documentation Notice</strong>
+    <p>
+      This documentation describes the current data storage and deletion
+      procedures for TakaLog Money Tracker. The app does not provide a
+      separate Masud Labs hosted user account or an automated online
+      account-deletion endpoint.
+    </p>
+  </div>
+
+  <h2>1. Account and Google Sign-In</h2>
+  <p>
+    TakaLog Money Tracker does not require users to create a separate
+    account with Masud Labs. Google Sign-In is optional and is used only
+    to connect a Google account for Google Drive backup and restore.
+  </p>
+  <p>
+    The connected Google account details are stored locally in the app's
+    preferences to maintain the connection state.
+  </p>
+
+  <h2>2. Disconnect Your Google Account</h2>
+  <ol>
+    <li>Open TakaLog Money Tracker.</li>
+    <li>Go to the Backup &amp; Restore screen.</li>
+    <li>Select the Disconnect option.</li>
+  </ol>
+  <p>
+    Disconnecting removes the locally stored connected-account state
+    and stops the current Google Drive connection. It does not delete
+    backup files already uploaded to Google Drive.
+  </p>
+
+  <h2>3. Revoke Google Account Authorization</h2>
+  <p>
+    You can also revoke TakaLog's access from your Google Account:
+  </p>
+  <ol>
+    <li>Open your Google Account settings.</li>
+    <li>Go to the third-party apps and services access section.</li>
+    <li>Find TakaLog and remove its access.</li>
+  </ol>
+  <p>
+    Revoking Google authorization stops the app's authorized access.
+    It does not automatically delete backup files stored in Google Drive.
+  </p>
+  <p>
+    Google Account access management:
+    <a href="https://myaccount.google.com/connections"
+       target="_blank" rel="noopener noreferrer">
+      https://myaccount.google.com/connections
+    </a>
+  </p>
+
+  <h2>4. Delete Google Drive Backup Files</h2>
+  <p>
+    Optional cloud backups are stored as encrypted .tkb files in the
+    user's private Google Drive appDataFolder. Backup files may contain
+    app settings, categories, financial transactions, and lend and
+    borrow records.
+  </p>
+  <p>To delete cloud backup files:</p>
+  <ol>
+    <li>Keep your Google account connected to TakaLog.</li>
+    <li>Open the Backup &amp; Restore screen.</li>
+    <li>Turn off Auto Background Backup.</li>
+    <li>View the list of available remote backup files.</li>
+    <li>Delete each backup file using the in-app delete option.</li>
+    <li>Repeat until the backup list is empty.</li>
+    <li>Verify that no backup files remain before disconnecting.</li>
+  </ol>
+  <p>
+    Disconnecting your account, signing out, clearing app storage, or
+    uninstalling the app does not delete previously uploaded Google
+    Drive backup files. Delete those files separately while the app
+    still has authorized access.
+  </p>
+
+  <h2>5. Delete Local App Data</h2>
+  <p>
+    TakaLog stores financial records locally using Room/SQLite and
+    Android DataStore. Local data may include transactions, categories,
+    lend and borrow records, settings, and connected-account state.
+  </p>
+  <p>To remove local app data:</p>
+  <ol>
+    <li>Open Android Settings on your device.</li>
+    <li>Go to Apps and select TakaLog Money Tracker.</li>
+    <li>Open Storage.</li>
+    <li>Select Clear storage or Clear data.</li>
+  </ol>
+  <p>
+    Alternatively, uninstalling the app removes its private local
+    application data. The app's Android manifest disables Android
+    backup for its application data.
+  </p>
+
+  <h2>6. Exported Backup Files</h2>
+  <p>
+    If you exported a .tkb backup file using the Android file picker,
+    that file may be stored outside the app's private storage.
+    Clearing app data or uninstalling TakaLog does not necessarily
+    remove such exported files.
+  </p>
+  <p>
+    Locate and delete exported .tkb files separately using your
+    device's file manager or the storage location you selected.
+  </p>
+
+  <h2>7. Other Data Storage</h2>
+  <p>
+    TakaLog does not use Firebase or a separate cloud database to
+    synchronize users' financial records. Financial records are stored
+    locally unless the user chooses to create a Google Drive backup.
+  </p>
+
+  <h2>8. Request Assistance</h2>
+  <p>
+    If you need help understanding the deletion process or have
+    difficulty removing your data, contact the developer:
+  </p>
+  <p>
+    Email:
+    <a href="mailto:masudlabssupport@gmail.com">
+      masudlabssupport@gmail.com
+    </a>
+  </p>
+  <p>
+    Please do not email financial records, backup files, Google
+    passwords, access tokens, or recovery passphrases.
+  </p>
+
+  <h2>9. Important Information</h2>
+  <p>
+    Removing local app data and deleting Google Drive backups are
+    separate actions. To remove both, complete the cloud backup
+    deletion steps and the local app data deletion steps described
+    above.
+  </p>
+
+  <footer>
+    <p>© Masud Labs. All rights reserved.</p>
+    <p>
+      TakaLog Money Tracker - Data Deletion Instructions
+    </p>
+  </footer>
+</main>
+</body>
+</html>
