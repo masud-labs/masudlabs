@@ -1,3 +1,4 @@
+
 import {Link, useParams} from 'react-router-dom';
 import {
   ArrowLeft,
@@ -50,6 +51,8 @@ export function AppDetailPage() {
   if (!app) {
     return <NotFoundPage />;
   }
+
+  const isReadyForRelease = app.status === 'Ready for Release';
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
@@ -155,12 +158,9 @@ export function AppDetailPage() {
 
         {!app.playStoreUrl && (
           <div className="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800/80 text-xs sm:text-sm text-slate-500 dark:text-slate-400">
-            Store availability notice: This application is currently{' '}
-            <strong className="font-medium text-slate-700 dark:text-slate-200">
-              {app.status}
-            </strong>
-            . Official Google Play Store download links will be published here
-            only when the release goes live.
+            {isReadyForRelease
+              ? 'This application is prepared for release. Official Google Play Store download links will be published here when the release becomes available.'
+              : `Store availability notice: This application is currently ${app.status}. Official Google Play Store download links will be published here when the release goes live.`}
           </div>
         )}
       </section>
@@ -205,23 +205,22 @@ export function AppDetailPage() {
                   aria-hidden="true"
                 />
                 <p className="mt-3 text-sm font-medium text-slate-800 dark:text-slate-200">
-                  Screenshots Awaiting Publication
+                  Screenshots Coming Soon
                 </p>
                 <p className="mt-1 text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-md mx-auto">
-                  Verified interface screenshots will be added here once{' '}
-                  {app.name} enters public beta or production release.
+                  Verified interface screenshots will be published here when available.
                 </p>
               </div>
             )}
           </section>
 
-          {/* Features & Scope */}
+          {/* Features */}
           <section aria-labelledby="features-heading">
             <h2
               id="features-heading"
               className="font-display text-xl font-semibold text-slate-900 dark:text-white"
             >
-              Features &amp; Development Scope
+              Key Features
             </h2>
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {app.features.map((feature) => (
@@ -247,7 +246,7 @@ export function AppDetailPage() {
             </div>
           </section>
 
-          {/* Release Notes (only rendered when available) */}
+          {/* Release Notes */}
           {app.releaseNotes && app.releaseNotes.length > 0 && (
             <section aria-labelledby="release-notes-heading">
               <h2
