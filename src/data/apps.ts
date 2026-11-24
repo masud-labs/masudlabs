@@ -16,6 +16,7 @@ export const APP_STATUSES: AppStatus[] = [
   'Published',
   'Beta',
   'In Development',
+  'Ready for Release',
   'Coming Soon',
 ];
 
