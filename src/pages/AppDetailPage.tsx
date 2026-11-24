@@ -5,7 +5,6 @@ import {
   ExternalLink,
   FileText,
   Globe,
-  ImageOff,
   Mail,
   Shield,
   Trash2,
