@@ -1,3 +1,4 @@
+
 import {Link} from 'react-router-dom';
 import {ArrowUpRight, ExternalLink} from 'lucide-react';
 import {AppRecord} from '../types/app';
@@ -10,6 +11,7 @@ interface AppCardProps {
 const STATUS_TEXT_COLOR: Record<AppRecord['status'], string> = {
   Published: 'text-emerald-600 dark:text-emerald-400',
   Beta: 'text-cyan-600 dark:text-cyan-400',
+  'Ready for Release': 'text-emerald-600 dark:text-emerald-400',
   'In Development': 'text-violet-600 dark:text-violet-400',
   'Coming Soon': 'text-slate-600 dark:text-slate-400',
 };
